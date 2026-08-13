@@ -1,0 +1,42 @@
+/* css/style.css — Vitabyte Base Variables & Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-emerald: #10B981;
+  --primary-emerald-hover: #059669;
+  --primary-emerald-dark: #047857;
+  --mint-bg: #F0FDF4;
+  --mint-card-bg: #E6F4EA;
+  --mint-subtle: #ECFDF5;
+  --slate-dark: #0F172A;
+  --slate-body: #334155;
+  --slate-muted: #64748B;
+  --border-light: #E2E8F0;
+  --border-emerald: rgba(16, 185, 129, 0.3);
+  --warning-red: #EF4444;
+  --warning-bg: #FEF2F2;
+  --warning-border: #FEE2E2;
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+  --shadow-emerald: 0 12px 28px -6px rgba(16, 185, 129, 0.25);
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #F8FAFC;
+  color: var(--slate-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  color: var(--slate-dark);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}

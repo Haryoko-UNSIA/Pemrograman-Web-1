@@ -1,0 +1,306 @@
+/* css/components.css — Vitabyte UI Components (Cards, Buttons, Nav, etc.) */
+
+/* NAVBAR STYLING */
+.navbar-vitabyte {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand-vitabyte {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.45rem;
+  color: var(--primary-emerald-dark) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.navbar-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: contrast(105%);
+}
+
+.nav-link-vitabyte {
+  color: var(--slate-body);
+  font-weight: 600;
+  padding: 0.5rem 1rem !important;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-link-vitabyte:hover, .nav-link-vitabyte.active {
+  color: var(--primary-emerald-dark);
+  background-color: var(--mint-bg);
+}
+
+.nav-link-disabled-vitabyte {
+  color: #94A3B8 !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* BUTTON SYSTEM */
+.btn-emerald {
+  background-color: var(--primary-emerald);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  box-shadow: var(--shadow-emerald);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-emerald:hover, .btn-emerald:focus {
+  background-color: var(--primary-emerald-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -6px rgba(16, 185, 129, 0.35);
+}
+
+.btn-outline-emerald {
+  border: 2px solid var(--primary-emerald);
+  color: var(--primary-emerald-dark);
+  background: transparent;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.7rem 1.4rem;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-emerald:hover {
+  background-color: var(--primary-emerald);
+  color: #ffffff;
+}
+
+/* CARDS & CONTAINERS */
+.vitabyte-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.75rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vitabyte-card:hover {
+  box-shadow: 0 14px 30px -4px rgba(15, 23, 42, 0.08);
+}
+
+.vitabyte-card-mint {
+  background: var(--mint-card-bg);
+  border: 1px solid var(--border-emerald);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.vitabyte-card-warning {
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+/* GAUGE & PROGRESS BARS */
+.gauge-bar-container {
+  height: 10px;
+  background-color: #E2E8F0;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gauge-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease;
+}
+
+/* ASSESSMENT CARDS */
+.option-card {
+  background: #ffffff;
+  border: 2px solid var(--border-light);
+  border-radius: 14px;
+  padding: 1.15rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.option-card:hover {
+  border-color: var(--primary-emerald);
+  background-color: var(--mint-bg);
+}
+
+.option-card.selected {
+  background-color: var(--mint-card-bg);
+  border-color: var(--primary-emerald);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.15);
+}
+
+/* BADGES & CHIPS */
+.badge-pill-mint {
+  background-color: var(--mint-card-bg);
+  color: var(--primary-emerald-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-gallery-item {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.badge-gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.badge-gallery-item.locked {
+  opacity: 0.55;
+  filter: grayscale(0.8);
+}
+
+/* DAILY CHECKLIST ITEM */
+.checklist-item {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.checklist-item.completed {
+  background-color: var(--mint-subtle);
+  border-color: var(--border-emerald);
+}
+
+.checklist-item.current {
+  border: 2px solid var(--primary-emerald);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.12);
+}
+
+.checklist-item.locked {
+  background-color: #F8FAFC;
+  opacity: 0.7;
+}
+
+/* FOOTER STYLING */
+.footer-vitabyte {
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+  padding: 1.25rem 0;
+  font-size: 0.875rem;
+}
+
+/* ============================================================
+   EDUKASI — Vitabyte Wellness Components (Tipbox, Personal Tip, Principle)
+   ============================================================ */
+
+/* Eyebrow label (small uppercase category label) */
+.eyebrow-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-emerald-dark);
+}
+
+/* Tips Praktis callout per section */
+.tipbox-vitabyte {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: #f0fbf7;
+  border: 1px solid #cdeee2;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Personal Practical Tip box (BMI / personal) */
+.personal-tip-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff8e8;
+  border: 1px solid #f0dca9;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Micro-step highlight within personal tip box */
+.micro-step-box {
+  min-width: 200px;
+  flex: 0 0 auto;
+  background: #fff;
+  border: 1px solid #ead7a5;
+  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #5d4a1f;
+}
+
+/* Prinsip Vitabyte section */
+.principle-box {
+  background: #eef5ff;
+  border: 1px solid #d4e4ff;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+}
+
+
+/* Education video */
+.video-learning-card {
+  padding: 1.25rem;
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(236, 253, 245, 0.78), #fff);
+}
+.video-learning-card iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Trusted external health resource */
+.learn-more-card {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.learn-more-card .eyebrow-label {
+  color: var(--primary-emerald-dark);
+}
